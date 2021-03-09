@@ -53,6 +53,18 @@ void Paivays::lisaaPaiva(){
         kuukaudenkesto = 31;
     }
     
+    if (kuukausi >= 8)
+    {
+        if (kuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
+        {
+            kuukaudenkesto = 31;
+        }
+        else  // pariton kuukausi, tammi, maalis, jne on 31 päivää
+        {
+            kuukaudenkesto = 30;
+        }
+    }
+
     paiva++;
     if (paiva > kuukaudenkesto)
     {
