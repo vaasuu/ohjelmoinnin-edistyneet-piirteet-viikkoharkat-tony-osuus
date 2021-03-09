@@ -15,6 +15,10 @@ class Paivays {
         int getKuukausi();
         int getVuosi();
         void tulostaPaivays();
+        
+        // teht3 lisäys
+        void kysyPaivamaara();
+        void lisaaPaiva();
 
     // Luokan tietojäsenet (yleensä private)
     // Näihin päästään käsiksi vain luokan metodeissa
