@@ -16,6 +16,17 @@ void Paivays::setVuosi(int avuosi){
     vuosi = avuosi;
 }
 
+int Paivays::getPaiva(){
+    return paiva;
+}
+int Paivays::getKuukausi(){
+    return kuukausi;
+}
+
+int Paivays::getVuosi(){
+    return vuosi;
+}
+
 void Paivays::tulostaPaivays(){
     cout << paiva << '.' << kuukausi << '.' << vuosi << endl;
 }
