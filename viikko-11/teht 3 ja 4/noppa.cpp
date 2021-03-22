@@ -3,30 +3,53 @@
 #include <time.h>
 using namespace std;
 
-noppa::noppa() : mNoppienLkm(1)
+noppa::noppa() : mNoppienLkm(1), mMaxNoppienLkm(5)
 {
-    heitaNoppaa();
+    int nopat[mMaxNoppienLkm];
+    
+    srand(time(NULL));
+    for (int i = 0; i < mNoppienLkm; i++)
+    {
+        nopat[i] = rand() % 6 + 1;
+    }
     // cout << "Alustetun nopan lukemaksi tuli " << noppa::getViimeisinLukema() << endl; 
 }
 
-noppa::noppa(int aNoppienLkm) : mNoppienLkm(aNoppienLkm)
+noppa::noppa(int aNoppienLkm, int aMaxNoppienLkm) : mNoppienLkm(aNoppienLkm), mMaxNoppienLkm(5)
 {
-    heitaNoppaa();
+    int nopat[mMaxNoppienLkm];
+    srand(time(NULL));
+    for (int i = 0; i < mNoppienLkm; i++)
+    {
+        nopat[i] = rand() % 6 + 1;
+    }
     // cout << "Alustetun nopan lukemaksi tuli " << noppa::getViimeisinLukema() << endl; 
 }
 
 
 int noppa::getViimeisinLukema(){
-    return mNopanViimeisinLuku;
+    int noppaSumma = 0;
+    for (int i = 0; i < mNoppienLkm; i++)
+    {
+        noppaSumma += nopat[i];
+    }
+    return noppaSumma;
 }
 
 void noppa::heitaNoppaa(){
     srand(time(NULL));
-    mNopanViimeisinLuku = rand() % 6 + 1;
+    cout << "noppien lukemat:" << endl;
+    for (int i = 0; i < mNoppienLkm; i++)
+    {
+        nopat[i] = rand() % 6 + 1;
+        cout << nopat[i] << " ";
+    }
+    cout << endl;
+    cout << "Noppien summa: " << getViimeisinLukema() << endl;
 }
 
-void noppa::kerroViimeisenHeitonLukeama(){
-    cout << "Viimeisin heitto oli " << mNopanViimeisinLuku << endl;
+void noppa::kerroViimeisenHeitonLukema(){
+    cout << "Viimeisin heitto oli yhteensä " << getViimeisinLukema() << ". Heitetty " << mNoppienLkm << " nopalla." << endl;
 }
 
 int noppa::getNoppienLkm(){

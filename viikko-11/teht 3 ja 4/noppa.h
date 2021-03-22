@@ -3,20 +3,17 @@ class noppa
 {
 public:
     noppa();
-    noppa(int aNoppienLkm);
+    noppa(int aNoppienLkm, const int aMaxNoppienLkm = 5);
 
     int getViimeisinLukema();
     void heitaNoppaa();
-    void kerroViimeisenHeitonLukeama();
+    void kerroViimeisenHeitonLukema();
     int getNoppienLkm();
     void setNoppienLkm(int aNoppienLkm);
-    
+
 private:
     int mNopanViimeisinLuku;
     int mNoppienLkm;
-    int mNoppa1;
-    int mNoppa2;
-    int mNoppa3;
-    int mNoppa4;
-    int mNoppa5;
+    int mMaxNoppienLkm;
+    int nopat[];
 };
