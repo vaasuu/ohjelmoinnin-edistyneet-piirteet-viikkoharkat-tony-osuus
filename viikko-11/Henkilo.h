@@ -8,6 +8,10 @@ using namespace std;
 class Henkilo {
     // Luokan julkinen rajapinta (API), toiminnot, metodit
     public:
+
+        Henkilo();
+        Henkilo(string aNimi, int aIka);
+
         void setNimi(string aNimi);
         void setIka(int aIka);
         string getNimi();
@@ -17,6 +21,6 @@ class Henkilo {
     // Luokan tietojäsenet (yleensä private)
     // Näihin päästään käsiksi vain luokan metodeissa
     private:
-        string nimi;
-        int ika;
+        string mNimi;
+        int mIka;
 };

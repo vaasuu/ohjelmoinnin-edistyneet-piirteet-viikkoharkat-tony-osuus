@@ -8,9 +8,20 @@ using namespace std;
 class Paivays {
     // Luokan julkinen rajapinta (API), toiminnot, metodit
     public:
-        void setPaiva(int);
-        void setKuukausi(int);
-        void setVuosi(int);
+
+        // Rakentajat == metodi, joka alustaa olion (tietojäsenet)
+        // Rakentaja on metodi, jolla on luokan nimi ilman paluuarvoa
+        // Jos enme kirjoita yhtään rakentajaa, kääntäjä tuottaa ns. oletusrakentajan,
+        // Joka on parametriton rakentaja.
+
+        Paivays();
+        Paivays(int aPaiva, int aKuukausi, int aVuosi);
+ 
+
+
+        void setPaiva(int aPaiva);
+        void setKuukausi(int aKuukausi);
+        void setVuosi(int aVuosi);
         int getPaiva();
         int getKuukausi();
         int getVuosi();
@@ -23,7 +34,7 @@ class Paivays {
     // Luokan tietojäsenet (yleensä private)
     // Näihin päästään käsiksi vain luokan metodeissa
     private:
-        int paiva;
-        int kuukausi;
-        int vuosi;
+        int mPaiva;
+        int mKuukausi;
+        int mVuosi;
 };

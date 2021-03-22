@@ -4,58 +4,69 @@
 // Henkilö -luokan määrittely eli toteutus (implementation)
 // Täällä toteutetaan luokan toiminnot eli metodit
 
-void Paivays::setPaiva(int apaiva){
-    paiva = apaiva;
+Paivays::Paivays() : mPaiva(1), mKuukausi(1), mVuosi(2000) // alustuslista
+{
+    cout << "Luodaan päiväys (parametriton rekentaja)" << endl;
 }
 
-void Paivays::setKuukausi(int akuukausi){
-    kuukausi = akuukausi;
+Paivays::Paivays(int aPaiva, int aKuukausi, int aVuosi)
+    : mPaiva(aPaiva), mKuukausi(aKuukausi), mVuosi(aVuosi) 
+{
+    cout << "Luodaan päiväys (3 parametrinen rakentaja)" << endl;
 }
 
-void Paivays::setVuosi(int avuosi){
-    vuosi = avuosi;
+void Paivays::setPaiva(int aPaiva){
+    mPaiva = aPaiva;
+}
+
+void Paivays::setKuukausi(int aKuukausi){
+    mKuukausi = aKuukausi;
+}
+
+void Paivays::setVuosi(int aVuosi){
+    mVuosi = aVuosi;
 }
 
 int Paivays::getPaiva(){
-    return paiva;
+    return mPaiva;
 }
 int Paivays::getKuukausi(){
-    return kuukausi;
+    return mKuukausi;
 }
 
 int Paivays::getVuosi(){
-    return vuosi;
+    return mVuosi;
 }
 
 void Paivays::tulostaPaivays(){
-    cout << paiva << '.' << kuukausi << '.' << vuosi << endl;
+    cout << mPaiva << '.' << mKuukausi << '.' << mVuosi << endl;
 }
 
 void Paivays::kysyPaivamaara(){
-    int apaiva, akuukausi, avuosi;
+    int aPaiva, aKuukausi, aVuosi;
     
     cout << "päivä: ";
-    cin >> apaiva;
-    setPaiva(apaiva);
+    cin >> aPaiva;
+    setPaiva(aPaiva);
 
     cout << "kuukausi: ";
-    cin >> akuukausi;
-    setKuukausi(akuukausi);
+    cin >> aKuukausi;
+    setKuukausi(aKuukausi);
     
     cout << "vuosi: ";
-    cin >> avuosi;
-    setVuosi(avuosi);
+    cin >> aVuosi;
+    setVuosi(aVuosi);
 }
 
 // ei oteta karkausvuotta huomioon
 void Paivays::lisaaPaiva(){
     int kuukaudenkesto;
 
-    if (kuukausi == 2)
+    if (mKuukausi == 2)
     {
         kuukaudenkesto = 28; // helmikuu 28 päivää, ei oteta karkausvuotta huomioon
     }
-    else if (kuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
+    else if (mKuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
     {
         kuukaudenkesto = 30;
     }
@@ -64,9 +75,9 @@ void Paivays::lisaaPaiva(){
         kuukaudenkesto = 31;
     }
     
-    if (kuukausi >= 8)
+    if (mKuukausi >= 8)
     {
-        if (kuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
+        if (mKuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
         {
             kuukaudenkesto = 31;
         }
@@ -76,15 +87,15 @@ void Paivays::lisaaPaiva(){
         }
     }
 
-    paiva++;
-    if (paiva > kuukaudenkesto)
+    mPaiva++;
+    if (mPaiva > kuukaudenkesto)
     {
-        paiva = 1;
-        kuukausi++;
+        mPaiva = 1;
+        mKuukausi++;
     }
-    if (kuukausi>12)
+    if (mKuukausi>12)
     {
-        kuukausi = 1;
-        vuosi++;
+        mKuukausi = 1;
+        mVuosi++;
     }
 }

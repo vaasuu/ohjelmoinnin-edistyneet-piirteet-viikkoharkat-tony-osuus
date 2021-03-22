@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Henkilo.h"
+#include "Paivays.h"
 #include <string>
 using namespace std;
 
@@ -17,19 +18,20 @@ using namespace std;
 
 
 int main(){
-    // C++ ohjelma (prosessi) alkaa tästä
-    cout << "Hello" << endl;
-    // luodaan henkilö pekka == luodaan olio luokasta Henkilö
-    Henkilo pekka;
-    pekka.setNimi("Pekka");
-    pekka.setIka(20);
-    
+
+    Paivays joulu; // kutsutaan oletusrakentajaa (parametriton rakentaja)
+    joulu.tulostaPaivays();
+
+    Paivays kesa(15,6,2021);
+    kesa.tulostaPaivays();
+
+    Henkilo kaapo;
+    kaapo.tulostaHenkilonTiedot();
+
+    Henkilo pekka("Pekka", 20);
     pekka.tulostaHenkilonTiedot();
 
-    Henkilo kalle;
-    kalle.setNimi("Kalle");
-    kalle.setIka(21);
-    kalle.tulostaHenkilonTiedot();
+    Henkilo henkilot[10]; // käyttää parametritonta rakentajaa
     
     return 0;
 }
