@@ -11,6 +11,7 @@ class Henkilo {
 
         Henkilo();
         Henkilo(string aNimi, int aIka);
+        ~Henkilo();
 
         void setNimi(string aNimi);
         void setIka(int aIka);

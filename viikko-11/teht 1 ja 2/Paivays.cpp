@@ -15,6 +15,10 @@ Paivays::Paivays(int aPaiva, int aKuukausi, int aVuosi)
     cout << "Luodaan päiväys (3 parametrinen rakentaja)" << endl;
 }
 
+Paivays::~Paivays(){
+    cout << "Päiväys -luokan purkaja" << endl;
+}
+
 void Paivays::setPaiva(int aPaiva){
     mPaiva = aPaiva;
 }

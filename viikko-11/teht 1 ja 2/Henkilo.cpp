@@ -14,6 +14,10 @@ Henkilo::Henkilo(string aNimi, int aIka) : mNimi(aNimi), mIka(aIka)
     cout << "Henkilö " << aNimi << " luotu. (2 parametrinen rakentaja)" << endl;
 }
 
+Henkilo::~Henkilo(){
+    cout << "Henkilö -luokan purkaja" << endl;
+}
+
 void Henkilo::setNimi(string aNimi){
     // asetetaan henkilölle uusi nimi
     mNimi = aNimi; 

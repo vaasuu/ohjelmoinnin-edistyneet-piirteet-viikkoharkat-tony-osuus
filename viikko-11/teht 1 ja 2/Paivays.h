@@ -17,7 +17,8 @@ class Paivays {
         Paivays();
         Paivays(int aPaiva, int aKuukausi, int aVuosi);
  
-
+        // Purkaja (destructor) == methodi, jota kutsutaan, kun olio siivotaan muistista (vapautuu)
+        ~Paivays();
 
         void setPaiva(int aPaiva);
         void setKuukausi(int aKuukausi);
