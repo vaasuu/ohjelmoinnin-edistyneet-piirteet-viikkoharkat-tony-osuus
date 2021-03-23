@@ -1,4 +1,6 @@
-# Ohjelmoinnin viikkoharjoitukset – 2 viikkoharjoitusten ratkaisut (Valtteri Huuskonen)
+# Ohjelmoinnin viikkoharjoitukset – 3. viikkoharjoitusten ratkaisut 
+
+#### (Valtteri Huuskonen)
 
 ## Tehtävä 1
 
