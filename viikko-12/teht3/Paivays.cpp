@@ -70,25 +70,14 @@ void Paivays::lisaaPaiva(){
     {
         kuukaudenkesto = 28; // helmikuu 28 päivää, ei oteta karkausvuotta huomioon
     }
-    else if (mKuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
+    else if ((mKuukausi == 4) or (mKuukausi == 6) or (mKuukausi == 9) or (mKuukausi == 11)) // huhti, kesä, syys, marras 
+                                                                                            // jne on 30 päivää
     {
         kuukaudenkesto = 30;
     }
-    else  // pariton kuukausi, tammi, maalis, jne on 31 päivää
+    else  // tammi, maalis, jne on 31 päivää
     {
         kuukaudenkesto = 31;
-    }
-    
-    if (mKuukausi >= 8)
-    {
-        if (mKuukausi % 2 == 0) // parillenen kuukausi, helmi, huhti, jne on 30 päivää
-        {
-            kuukaudenkesto = 31;
-        }
-        else  // pariton kuukausi, tammi, maalis, jne on 31 päivää
-        {
-            kuukaudenkesto = 30;
-        }
     }
 
     mPaiva++;
