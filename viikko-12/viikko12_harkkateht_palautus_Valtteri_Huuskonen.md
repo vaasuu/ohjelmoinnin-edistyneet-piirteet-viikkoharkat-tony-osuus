@@ -1,6 +1,6 @@
 # Ohjelmoinnin viikkoharjoitukset – 3. viikkoharjoitusten ratkaisut 
 
-#### (Valtteri Huuskonen)
+#### (Valtteri Huuskonen 2021-03-23)
 
 ## Tehtävä 1
 
