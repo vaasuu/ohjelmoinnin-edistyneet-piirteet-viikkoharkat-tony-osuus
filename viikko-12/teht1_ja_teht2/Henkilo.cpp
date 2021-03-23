@@ -27,15 +27,15 @@ void Henkilo::setIka(int aIka){
     mIka = aIka;
 }
 
-string Henkilo::getNimi(){
+string Henkilo::getNimi() const {
     return mNimi;
 }
 
-int Henkilo::getIka(){
+int Henkilo::getIka() const {
     return mIka;
 }
 
-void Henkilo::tulostaHenkilonTiedot(){
+void Henkilo::tulostaHenkilonTiedot() const {
     cout << "Henkilön tiedot" << endl;
     cout << "Nimi: " << mNimi << endl;
     cout << "Ika: " << mIka << endl;

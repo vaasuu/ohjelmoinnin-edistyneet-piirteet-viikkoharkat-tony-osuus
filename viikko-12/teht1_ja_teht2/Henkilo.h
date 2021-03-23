@@ -15,9 +15,9 @@ class Henkilo {
 
         void setNimi(string aNimi);
         void setIka(int aIka);
-        string getNimi();
-        int getIka();
-        void tulostaHenkilonTiedot();
+        string getNimi() const;
+        int getIka() const;
+        void tulostaHenkilonTiedot() const;
 
     // Luokan tietojäsenet (yleensä private)
     // Näihin päästään käsiksi vain luokan metodeissa
