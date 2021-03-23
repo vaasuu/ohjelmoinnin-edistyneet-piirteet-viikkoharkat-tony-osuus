@@ -81,7 +81,6 @@ void Henkilo::tulostaHenkilonTiedot() const {
 }
 ```
 
-
 ## Tehtävä 2 muutetut tiedostot
 
 ### Henkilö.h
@@ -284,14 +283,6 @@ void Osoite::tulostaTiedot() const {
 ```
 
 ## Tehtävä 3
-
-
-```
-
-```
-
-
-## Tehtävä 4
 
 ```
 
