@@ -13,6 +13,14 @@ Kalenterimerkinta::Kalenterimerkinta(Paivays aPaivays, string aAsia, bool aMuist
     cout << "Kalenterimerkintä-luokan parametrillinen rakentaja" << endl;
 }
 
+Kalenterimerkinta::Kalenterimerkinta(const Kalenterimerkinta& aKalenterimerkinta)
+    : mAsia(aKalenterimerkinta.mAsia), mMuistutus(aKalenterimerkinta.mMuistutus)
+{
+    cout << "Kalenterimerkinta-luokan Kopiorakentaja kysyy päivää" << endl;
+    mPaivays.kysyPaivamaara();
+    cout << "Kalenterimerkinta-luokan Kopiorakentaja" << endl;
+}
+
 Kalenterimerkinta::~Kalenterimerkinta() {
     cout << "Kalenterimerkintä Purkaja" << endl;
 };

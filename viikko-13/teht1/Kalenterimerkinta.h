@@ -7,6 +7,7 @@ class Kalenterimerkinta
 public:
     Kalenterimerkinta();
     Kalenterimerkinta(Paivays aPaivays, string aAsia, bool aMuistutus);
+    Kalenterimerkinta(const Kalenterimerkinta& aKalenterimerkinta); // kopiorakentaja
     ~Kalenterimerkinta();
     Paivays getPaivays();
     string getAsia();
