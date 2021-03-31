@@ -57,3 +57,20 @@ void Henkilo::tulostaHenkilonTiedot() const {
     cout << "Osoite:" << endl;
     osoite.tulostaTiedot();
 }
+
+void Henkilo::kysyTiedot() const {
+string name, address;
+int age;
+
+cout << "Nimi: ";
+getline(cin,name);
+
+
+cout << "Ikä: ";
+getline(cin,age);
+
+
+cout << "Katu: ";
+getline(cin,address);
+
+}
