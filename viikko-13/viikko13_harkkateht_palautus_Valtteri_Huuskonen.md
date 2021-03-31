@@ -220,18 +220,6 @@ void Kalenterimerkinta::kysyTiedot() {
 };
 ```
 
-### 
-
-```cpp
-
-```
-
-### 
-
-```cpp
-
-```
-
 ## Tehtävä 3
 
 ### 
