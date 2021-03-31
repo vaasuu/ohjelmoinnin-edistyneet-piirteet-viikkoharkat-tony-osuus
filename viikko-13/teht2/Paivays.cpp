@@ -42,7 +42,7 @@ int Paivays::getVuosi(){
     return mVuosi;
 }
 
-void Paivays::tulostaPaivays(){
+void Paivays::tulostaPaivays() const {
     cout << mPaiva << '.' << mKuukausi << '.' << mVuosi << endl;
 }
 

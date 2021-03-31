@@ -26,7 +26,7 @@ class Paivays {
         int getPaiva();
         int getKuukausi();
         int getVuosi();
-        void tulostaPaivays();
+        void tulostaPaivays() const;
         
         // teht3 lisäys
         void kysyPaivamaara();

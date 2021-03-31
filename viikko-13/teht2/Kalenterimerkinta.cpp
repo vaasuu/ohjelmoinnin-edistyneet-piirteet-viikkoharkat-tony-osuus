@@ -7,7 +7,7 @@ Kalenterimerkinta::Kalenterimerkinta() : mPaivays(1,1,1970), mAsia("N/A"), mMuis
     cout << "Kalenterimerkintä-luokan parametriton rakentaja" << endl;
 };
 
-Kalenterimerkinta::Kalenterimerkinta(Paivays aPaivays, string aAsia, bool aMuistutus) 
+Kalenterimerkinta::Kalenterimerkinta(const Paivays& aPaivays, const string& aAsia, const bool& aMuistutus) 
     : mPaivays(aPaivays), mAsia(aAsia), mMuistutus(aMuistutus)
 {
     cout << "Kalenterimerkintä-luokan parametrillinen rakentaja" << endl;
@@ -25,31 +25,31 @@ Kalenterimerkinta::~Kalenterimerkinta() {
     cout << "Kalenterimerkintä Purkaja" << endl;
 };
 
-Paivays Kalenterimerkinta::getPaivays() {
+Paivays Kalenterimerkinta::getPaivays() const {
     return mPaivays;
 };
 
-string Kalenterimerkinta::getAsia() {
+string Kalenterimerkinta::getAsia() const {
     return mAsia;
 };
 
-bool Kalenterimerkinta::getMuistutus() {
+bool Kalenterimerkinta::getMuistutus() const {
     return mMuistutus;
 };
 
-void Kalenterimerkinta::setPaivays(Paivays aPaivays) {
+void Kalenterimerkinta::setPaivays(const Paivays& aPaivays) {
     mPaivays = aPaivays;
 };
 
-void Kalenterimerkinta::setAsia(string aAsia) {
+void Kalenterimerkinta::setAsia(const string& aAsia) {
     mAsia = aAsia;
 };
 
-void Kalenterimerkinta::setMuistutus(bool aMuistutus) {
+void Kalenterimerkinta::setMuistutus(const bool& aMuistutus) {
     mMuistutus = aMuistutus;
 };
 
-void Kalenterimerkinta::tulostaMerkinta() {
+void Kalenterimerkinta::tulostaMerkinta() const {
     cout << "\n\nKalenterimerkintä:" << endl;
     cout << "Muistutus [";
     
