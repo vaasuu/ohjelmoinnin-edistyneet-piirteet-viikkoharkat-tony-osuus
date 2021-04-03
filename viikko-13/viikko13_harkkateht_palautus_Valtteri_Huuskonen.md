@@ -397,6 +397,41 @@ int main(){
 }
 ```
 
+### Lisähaaste: poista henkilö-ominaisuus
+
+```cpp
+        cout << "1. Lisää uusi henkilö\n2. Tulosta henkilöt\n3. Lopeta\n4. Poista henkilö" << endl;
+        .
+        .
+        .
+            case '4':
+                {
+                    bool deleted;
+                    string nameToDelete;
+                    cout << "Anna poistettavan henkilön nimi: ";
+                    cin.ignore(256, '\n');
+                    getline(cin,nameToDelete);
+
+                    for (size_t i = 0; i < henkilot.size(); i++)
+                    {
+                        if (henkilot[i].getNimi() == nameToDelete)
+                        {
+                            henkilot.erase(henkilot.begin()+i);
+                            cout << nameToDelete << " on nyt poistettu!" << endl;
+                            deleted = true;
+                        }
+                        
+                    }
+                    if (!deleted)
+                    {
+                        cout << "Ei löydy henkilöä nimeltä \"" << nameToDelete << "\"" << endl;
+                    }
+                    
+                    break;
+                }
+
+```
+
 ### Osoite.h
 ```cpp
 #pragma once
