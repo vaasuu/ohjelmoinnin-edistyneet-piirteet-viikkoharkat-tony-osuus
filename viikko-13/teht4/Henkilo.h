@@ -12,6 +12,7 @@ class Henkilo {
         Henkilo();
         Henkilo(string aNimi, int aIka);
         Henkilo(string aNimi, int aIka, Osoite aOsoite);
+        Henkilo(const Henkilo& aHenkilo); // kopiorakentaja
         ~Henkilo();
 
         void setNimi(string aNimi);

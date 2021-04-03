@@ -22,6 +22,12 @@ Henkilo::Henkilo(string aNimi, int aIka, Osoite aOsoite)
     cout << "Luotu henkilö, jolla nimi, ikä ja osoite" << endl;
 }
 
+Henkilo::Henkilo(const Henkilo& aHenkilo) // kopiorakentaja
+    : mNimi(aHenkilo.mNimi), mIka(aHenkilo.mIka), osoite(aHenkilo.osoite)
+{
+    cout << "Henkilo –luokan kopiorakentaja" << endl;
+}
+
 Henkilo::~Henkilo(){
     cout << "Henkilö -luokan purkaja" << endl;
 }
