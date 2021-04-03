@@ -11,6 +11,7 @@ int main(){
     while (run)
     {
         cout << "1. Lisää uusi henkilö\n2. Tulosta henkilöt\n3. Lopeta" << endl;
+        cout << "Valitse: ";
         char input=0;
         cin >> input;
         switch (input) {
@@ -19,7 +20,6 @@ int main(){
                 Henkilo x;
                 x.kysyTiedot();
                 henkilot.push_back(x);
-                // henkilot.push_back(Henkilo("Kalle", 20));
                 break;
             }
         case '2':

@@ -59,26 +59,21 @@ void Henkilo::tulostaHenkilonTiedot() const {
 }
 
 void Henkilo::kysyTiedot() {
-string name, address;
-int age;
+    string name, address;
+    int age;
 
-cin.clear();
-cin.ignore();
-cout << "Nimi: ";
-getline(cin,name);
-mNimi = name;
+    cin.ignore(256,'\n');
+    cout << "Nimi: ";
+    getline(cin,name);
+    mNimi = name;
 
-cin.clear();
-cin.ignore();
-cout << "Ikä: ";
-cin >> age;
-mIka = age;
 
-cin.clear();
-cin.ignore();
-cout << "Katu: ";
-getline(cin,address);
-osoite.setKatuosoite(address);
-cin.clear();
-cin.ignore();
+    cout << "Ikä: ";
+    cin >> age;
+    mIka = age;
+    cin.ignore(256,'\n');
+
+    cout << "Katu: ";
+    getline(cin,address);
+    osoite.setKatuosoite(address);
 }
