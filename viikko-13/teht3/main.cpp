@@ -16,7 +16,10 @@ int main(){
         switch (input) {
         case '1': 
             {
-                henkilot.push_back(Henkilo("Kalle", 20));
+                Henkilo x;
+                x.kysyTiedot();
+                henkilot.push_back(x);
+                // henkilot.push_back(Henkilo("Kalle", 20));
                 break;
             }
         case '2':

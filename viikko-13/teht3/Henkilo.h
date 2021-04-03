@@ -21,7 +21,7 @@ class Henkilo {
         void setOsoite(Osoite aOsoite);
         Osoite getOsoite() const;
         void tulostaHenkilonTiedot() const;
-        void kysyTiedot() const;
+        void kysyTiedot();
 
     // Luokan tietojäsenet (yleensä private)
     // Näihin päästään käsiksi vain luokan metodeissa
