@@ -406,7 +406,7 @@ int main(){
         .
             case '4':
                 {
-                    bool deleted;
+                    bool deleted = false;
                     string nameToDelete;
                     cout << "Anna poistettavan henkilön nimi: ";
                     cin.ignore(256, '\n');
