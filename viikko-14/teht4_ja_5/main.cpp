@@ -2,10 +2,12 @@
 #include "Opiskelija.h"
 #include "Opettaja.h"
 #include <string>
+#include <vector>
 using namespace std;
 
 int main() {
 
+    // teht 4
     cout << "––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
     
     Henkilo a;
@@ -26,5 +28,20 @@ int main() {
     
     cout << "––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
 
+    // teht 5
+
+    vector <Henkilo*> henkilo_ptr_vektori;
+
+    henkilo_ptr_vektori.push_back(new Henkilo);
+    henkilo_ptr_vektori.push_back(new Opettaja);
+    henkilo_ptr_vektori.push_back(new Opiskelija);
+
+    // Vektorin kautta voi kutsua vain Henkilö-luokan metodeja, koska ne ovat Henkilö-tyyppisiä.
+
+    for (Henkilo* x : henkilo_ptr_vektori)
+    {
+        x->tulostaHenkilonTiedot();
+    }
+    
     return 0;
 }
