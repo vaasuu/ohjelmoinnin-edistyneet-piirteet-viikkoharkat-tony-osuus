@@ -18,7 +18,7 @@ Opettaja::Opettaja(const string& aNimi, const int& aIka, const Osoite& aOsoite, 
 } 
 
 Opettaja::Opettaja(const Opettaja& aOpettaja) // kopiorakentaja
-    : opNro(aOpettaja.opNro), suoritetutKurssit(aOpettaja.suoritetutKurssit), opintopisteet(aOpettaja.opintopisteet)
+    : Henkilo(aOpettaja.getNimi(), aOpettaja.getIka(), Osoite(aOpettaja.getOsoite())), opNro(aOpettaja.opNro), suoritetutKurssit(aOpettaja.suoritetutKurssit), opintopisteet(aOpettaja.opintopisteet)
 {
     cout << "Opettaja kopiorakentaja" << endl;
 }
