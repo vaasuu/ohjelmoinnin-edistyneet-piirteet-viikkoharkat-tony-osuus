@@ -14,7 +14,7 @@ int main() {
 
 
     cout << "-------------------" << endl;
-    Opettaja ope("Kalle", 25, Osoite("Aleksanterinkatu 1", "3345", "Tampere"), "Tietotekniikka");
+    Opettaja ope("Tony", 25, Osoite("Aleksanterinkatu 1", "3345", "Tampere"), "Tietotekniikka");
     ope.lisaaKurssi("IoT ja web dev");
     ope.lisaaKurssi("Integrointi");
     ope.tulostaTiedot();
