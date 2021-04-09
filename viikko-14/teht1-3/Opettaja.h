@@ -4,13 +4,13 @@
 #include "Henkilo.h"
 using namespace std;
 
-class Opiskelija : public Henkilo
+class Opettaja : public Henkilo
 {
 public:
-    Opiskelija(); // parametriton oletusrakentaja
-    Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet); // 4 parametrinen oletusrakentaja
-    Opiskelija(const Opiskelija& aOpiskelija); // kopiorakentaja
-    ~Opiskelija(); // purkaja
+    Opettaja(); // parametriton oletusrakentaja
+    Opettaja(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet); // 4 parametrinen oletusrakentaja
+    Opettaja(const Opettaja& aOpettaja); // kopiorakentaja
+    ~Opettaja(); // purkaja
     
     void setOpNro(const string& aOpNro);
     string getOpNro() const;

@@ -6,47 +6,47 @@
 #include <vector>
 using namespace std;
 
-Opiskelija::Opiskelija() // parametriton rakentaja 
+Opettaja::Opettaja() // parametriton rakentaja 
 {
-    cout << "Opiskelija parametriton rakentaja" << endl;
+    cout << "Opettaja parametriton rakentaja" << endl;
 } 
 
-Opiskelija::Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet) // 4 parametrinen oletusrakentaja
+Opettaja::Opettaja(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet) // 4 parametrinen oletusrakentaja
 : Henkilo(aNimi, aIka, aOsoite), opNro(aOpNro), opintopisteet(aOpintopisteet) 
 {
-    cout << "Opiskelija 4 parametrinen oletusrakentaja" << endl;
+    cout << "Opettaja 4 parametrinen oletusrakentaja" << endl;
 } 
 
-Opiskelija::Opiskelija(const Opiskelija& aOpiskelija) // kopiorakentaja
-    : opNro(aOpiskelija.opNro), suoritetutKurssit(aOpiskelija.suoritetutKurssit), opintopisteet(aOpiskelija.opintopisteet)
+Opettaja::Opettaja(const Opettaja& aOpettaja) // kopiorakentaja
+    : opNro(aOpettaja.opNro), suoritetutKurssit(aOpettaja.suoritetutKurssit), opintopisteet(aOpettaja.opintopisteet)
 {
-    cout << "Opiskelija kopiorakentaja" << endl;
+    cout << "Opettaja kopiorakentaja" << endl;
 }
 
-Opiskelija::~Opiskelija() { // purkaja
-    cout << "Opiskelija purkaja" << endl;
+Opettaja::~Opettaja() { // purkaja
+    cout << "Opettaja purkaja" << endl;
 } 
 
-void Opiskelija::setOpNro(const string& aOpNro) {
+void Opettaja::setOpNro(const string& aOpNro) {
     opNro = aOpNro;
 }
-string Opiskelija::getOpNro() const {
+string Opettaja::getOpNro() const {
     return opNro;
 }
 
-void Opiskelija::setSuoritetutKurssit(const vector <string>& aSuoritetutKurssit) {
+void Opettaja::setSuoritetutKurssit(const vector <string>& aSuoritetutKurssit) {
     suoritetutKurssit = aSuoritetutKurssit;
 }
 
-vector <string> Opiskelija::getSuoritetutKurssit() const {
+vector <string> Opettaja::getSuoritetutKurssit() const {
     return suoritetutKurssit;
 } 
 
-void Opiskelija::lisaaKurssi(string aKurssi) {
+void Opettaja::lisaaKurssi(string aKurssi) {
     suoritetutKurssit.push_back(aKurssi);
 }
 
-void Opiskelija::tulostaTiedot() {
+void Opettaja::tulostaTiedot() {
     tulostaHenkilonTiedot();
     cout << "Opiskelijanumero: " << opNro << endl;
     cout << "Opintopisteet: " << opintopisteet << endl;
@@ -57,14 +57,14 @@ void Opiskelija::tulostaTiedot() {
     }
 }
 
-void Opiskelija::setOpintopisteet(const int& aOpintopisteet) {
+void Opettaja::setOpintopisteet(const int& aOpintopisteet) {
     opintopisteet = aOpintopisteet;
 }
 
-int Opiskelija::getOpintopisteet() const {
+int Opettaja::getOpintopisteet() const {
     return opintopisteet;
 }
 
-void Opiskelija::lisaaOpintopisteita(const int& aOpintopisteet) {
+void Opettaja::lisaaOpintopisteita(const int& aOpintopisteet) {
     opintopisteet += aOpintopisteet;
 }
