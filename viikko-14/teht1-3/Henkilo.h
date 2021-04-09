@@ -10,16 +10,16 @@ class Henkilo {
     // Luokan julkinen rajapinta (API), toiminnot, metodit
     public:
         Henkilo();
-        Henkilo(string& aNimi, int& aIka);
-        Henkilo(string& aNimi, int& aIka, Osoite& aOsoite);
+        Henkilo(const string& aNimi, const int& aIka);
+        Henkilo(const string& aNimi, const int& aIka, const Osoite& aOsoite);
         Henkilo(const Henkilo& aHenkilo); // kopiorakentaja
         ~Henkilo();
 
         void setNimi(string aNimi);
-        void setIka(int aIka);
+        void setIka(const int& aIka);
         string getNimi() const;
         int getIka() const;
-        void setOsoite(Osoite& aOsoite);
+        void setOsoite(const Osoite& aOsoite);
         Osoite getOsoite() const;
         void tulostaHenkilonTiedot() const;
         void kysyTiedot();

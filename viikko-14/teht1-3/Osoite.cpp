@@ -38,7 +38,7 @@ void Osoite::setKunta(std::string aKunta) {
     mKunta = aKunta;
 }
 void Osoite::tulostaTiedot() const {
-    cout << "Katuosoite: " << mKatuosoite << endl;
-    cout << "Postinumero: " << mPostinumero << endl;
-    cout << "Kunta: " << mKunta << endl;
+    cout << " Katuosoite: " << mKatuosoite << endl;
+    cout << " Postinumero: " << mPostinumero << endl;
+    cout << " Kunta: " << mKunta << endl;
 }
