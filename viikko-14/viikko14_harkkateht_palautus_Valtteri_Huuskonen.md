@@ -2,7 +2,7 @@
 
 #### (Valtteri Huuskonen 2021-04-09)
 
-## Tehtävä 1
+## Tehtävät 1-3
 
 ### Henkilo.cpp
 
