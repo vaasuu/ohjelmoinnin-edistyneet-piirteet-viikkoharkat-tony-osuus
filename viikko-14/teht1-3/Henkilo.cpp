@@ -11,12 +11,12 @@ Henkilo::Henkilo() : mNimi(""), mIka(0) // alustuslista
     cout << "Luodaan henkilö (parametriton rekentaja)" << endl;
 }
 
-Henkilo::Henkilo(string aNimi, int aIka) : mNimi(aNimi), mIka(aIka)
+Henkilo::Henkilo(string& aNimi, int& aIka) : mNimi(aNimi), mIka(aIka)
 {
     cout << "Henkilö " << aNimi << " luotu. (2 parametrinen rakentaja)" << endl;
 }
 
-Henkilo::Henkilo(string aNimi, int aIka, Osoite aOsoite)
+Henkilo::Henkilo(string& aNimi, int& aIka, Osoite& aOsoite)
     : mNimi(aNimi), mIka(aIka), osoite(aOsoite)
 {
     cout << "Luotu henkilö, jolla nimi, ikä ja osoite" << endl;
@@ -49,7 +49,7 @@ int Henkilo::getIka() const {
     return mIka;
 }
 
-void Henkilo::setOsoite(Osoite aOsoite) {
+void Henkilo::setOsoite(Osoite& aOsoite) {
     osoite = aOsoite;
 };
 Osoite Henkilo::getOsoite() const {
