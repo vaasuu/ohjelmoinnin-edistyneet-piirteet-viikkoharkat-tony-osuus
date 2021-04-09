@@ -11,10 +11,10 @@ Opiskelija::Opiskelija() // parametriton rakentaja
     cout << "Opiskelija parametriton rakentaja" << endl;
 } 
 
-Opiskelija::Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet) // 4 parametrinen oletusrakentaja
+Opiskelija::Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet) // 5 parametrinen oletusrakentaja
 : Henkilo(aNimi, aIka, aOsoite), opNro(aOpNro), opintopisteet(aOpintopisteet) 
 {
-    cout << "Opiskelija 4 parametrinen oletusrakentaja" << endl;
+    cout << "Opiskelija 5 parametrinen oletusrakentaja" << endl;
 } 
 
 Opiskelija::Opiskelija(const Opiskelija& aOpiskelija) // kopiorakentaja
