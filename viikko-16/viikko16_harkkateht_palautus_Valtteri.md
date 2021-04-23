@@ -459,7 +459,8 @@ class Opettaja : public Henkilo
 {
 public:
     Opettaja(); // parametriton oletusrakentaja
-    Opettaja(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aKoulutusala); // 4 parametrinen oletusrakentaja
+    Opettaja(const string& aNimi, const int& aIka, const Osoite& aOsoite, 
+    const string& aKoulutusala); // 4 parametrinen oletusrakentaja
     Opettaja(const Opettaja& aOpettaja); // kopiorakentaja
     ~Opettaja(); // purkaja
     
@@ -494,14 +495,16 @@ Opettaja::Opettaja() // parametriton rakentaja
     cout << "Opettaja parametriton rakentaja" << endl;
 } 
 
-Opettaja::Opettaja(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aKoulutusala) // 4 parametrinen oletusrakentaja
+Opettaja::Opettaja(const string& aNimi, const int& aIka, 
+const Osoite& aOsoite, const string& aKoulutusala) // 4 parametrinen oletusrakentaja
 : Henkilo(aNimi, aIka, aOsoite), Koulutusala(aKoulutusala) 
 {
     cout << "Opettaja 4 parametrinen oletusrakentaja" << endl;
 } 
 
 Opettaja::Opettaja(const Opettaja& aOpettaja) // kopiorakentaja
-    : Henkilo(aOpettaja.getNimi(), aOpettaja.getIka(), Osoite(aOpettaja.getOsoite())), Koulutusala(aOpettaja.Koulutusala), Vastuukurssit(aOpettaja.Vastuukurssit)
+    : Henkilo(aOpettaja.getNimi(), aOpettaja.getIka(), Osoite(aOpettaja.getOsoite())), 
+    Koulutusala(aOpettaja.Koulutusala), Vastuukurssit(aOpettaja.Vastuukurssit)
 {
     cout << "Opettaja kopiorakentaja" << endl;
 }
@@ -571,7 +574,8 @@ class Opiskelija : public Henkilo
 {
 public:
     Opiskelija(); // parametriton oletusrakentaja
-    Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet); // 4 parametrinen oletusrakentaja
+    Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, 
+    const string& aOpNro, const int& aOpintopisteet); // 4 parametrinen oletusrakentaja
     Opiskelija(const Opiskelija& aOpiskelija); // kopiorakentaja
     ~Opiskelija(); // purkaja
     
@@ -611,14 +615,17 @@ Opiskelija::Opiskelija() // parametriton rakentaja
     cout << "Opiskelija parametriton rakentaja" << endl;
 } 
 
-Opiskelija::Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, const string& aOpNro, const int& aOpintopisteet) // 5 parametrinen oletusrakentaja
+Opiskelija::Opiskelija(const string& aNimi, const int& aIka, const Osoite& aOsoite, 
+const string& aOpNro, const int& aOpintopisteet) // 5 parametrinen oletusrakentaja
 : Henkilo(aNimi, aIka, aOsoite), opNro(aOpNro), opintopisteet(aOpintopisteet) 
 {
     cout << "Opiskelija 5 parametrinen oletusrakentaja" << endl;
 } 
 
 Opiskelija::Opiskelija(const Opiskelija& aOpiskelija) // kopiorakentaja
-    : Henkilo(aOpiskelija.getNimi(), aOpiskelija.getIka(), Osoite(aOpiskelija.getOsoite())), opNro(aOpiskelija.opNro), suoritetutKurssit(aOpiskelija.suoritetutKurssit), opintopisteet(aOpiskelija.opintopisteet)
+    : Henkilo(aOpiskelija.getNimi(), aOpiskelija.getIka(), Osoite(aOpiskelija.getOsoite())), 
+    opNro(aOpiskelija.opNro), suoritetutKurssit(aOpiskelija.suoritetutKurssit), 
+    opintopisteet(aOpiskelija.opintopisteet)
 {
     cout << "Opiskelija kopiorakentaja" << endl;
 }
