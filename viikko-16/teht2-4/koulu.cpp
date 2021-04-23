@@ -19,8 +19,6 @@ koulu::~koulu() {
     cout << "koulu purkaja" << endl;
 }
 
-
-
 void koulu::lisaaOpiskelija(Opiskelija& aOpiskelija) {
     opiskelijat_ptr.push_back(new Opiskelija(aOpiskelija));    
 }
