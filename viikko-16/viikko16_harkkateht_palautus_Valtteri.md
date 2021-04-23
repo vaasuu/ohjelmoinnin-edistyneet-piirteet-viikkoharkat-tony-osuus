@@ -315,6 +315,9 @@ q. Poistu ohjelmasta
 
 ## Tehtävä 5
 
+Ennen tulostaTiedot() const -metodin muuttamista virtuaaliseksi, kutsuttiin Henkilö-luokan metodia. 
+
+
 ### filename.ext
 
 ```cpp
