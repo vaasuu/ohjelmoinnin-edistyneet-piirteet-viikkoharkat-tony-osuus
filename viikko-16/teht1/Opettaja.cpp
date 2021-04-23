@@ -73,3 +73,7 @@ void Opettaja::tulostaTiedot() {
         cout << " " << kurssi << endl;
     }
 }
+
+void Opettaja::teeJotain() {
+    mNimi = "Kalle";
+}

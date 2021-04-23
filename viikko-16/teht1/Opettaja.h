@@ -20,6 +20,7 @@ public:
     void lisaaKurssi(string aKurssi);
     void poistaKurssi(string aKurssi);
     void tulostaTiedot();
+    void teeJotain();
 
 private:
     string Koulutusala;

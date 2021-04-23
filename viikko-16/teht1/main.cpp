@@ -4,5 +4,7 @@
 using namespace std;
 
 int main() {
+    Opettaja kalle;
+    // kalle.mNimi = "Kalle";
     return 0;
 }
