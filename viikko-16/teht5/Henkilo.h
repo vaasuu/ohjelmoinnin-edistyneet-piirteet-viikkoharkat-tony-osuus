@@ -21,7 +21,7 @@ class Henkilo {
         int getIka() const;
         void setOsoite(const Osoite& aOsoite);
         Osoite getOsoite() const;
-        void tulostaTiedot() const;
+        virtual void tulostaTiedot() const;
         void kysyTiedot();
 
     // Luokan tietojäsenet (yleensä private)
