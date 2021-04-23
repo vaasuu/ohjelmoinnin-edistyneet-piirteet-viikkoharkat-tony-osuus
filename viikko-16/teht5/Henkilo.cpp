@@ -56,7 +56,7 @@ Osoite Henkilo::getOsoite() const {
     return osoite;
 };
 
-void Henkilo::tulostaHenkilonTiedot() const {
+void Henkilo::tulostaTiedot() const {
     cout << "Henkilön tiedot" << endl;
     cout << "Nimi: " << mNimi << endl;
     cout << "Ika: " << mIka << endl;

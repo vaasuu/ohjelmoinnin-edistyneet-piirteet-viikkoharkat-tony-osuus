@@ -64,8 +64,8 @@ void Opettaja::poistaKurssi(string aKurssi) {
     }
 }
 
-void Opettaja::tulostaTiedot() {
-    tulostaHenkilonTiedot();
+void Opettaja::tulostaTiedot() const {
+    Henkilo::tulostaTiedot();
     cout << "Koulutusala: " << Koulutusala << endl;
     cout << "Vastuukurssit: " << endl;
     for (string kurssi : Vastuukurssit)

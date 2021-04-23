@@ -19,7 +19,7 @@ public:
     vector <string> getSuoritetutKurssit() const; 
     void lisaaKurssi(string aKurssi);
     
-    void tulostaTiedot();
+    void tulostaTiedot() const;
     
     void setOpintopisteet(const int& aOpintopisteet);
     int getOpintopisteet() const;

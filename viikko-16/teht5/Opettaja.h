@@ -19,7 +19,7 @@ public:
     vector <string> getVastuukurssit() const; 
     void lisaaKurssi(string aKurssi);
     void poistaKurssi(string aKurssi);
-    void tulostaTiedot();
+    void tulostaTiedot() const;
 
 private:
     string Koulutusala;

@@ -46,8 +46,8 @@ void Opiskelija::lisaaKurssi(string aKurssi) {
     suoritetutKurssit.push_back(aKurssi);
 }
 
-void Opiskelija::tulostaTiedot() {
-    tulostaHenkilonTiedot();
+void Opiskelija::tulostaTiedot() const {
+    Henkilo::tulostaTiedot();
     cout << "Opiskelijanumero: " << opNro << endl;
     cout << "Opintopisteet: " << opintopisteet << endl;
     cout << "Suoritetut kurssit: " << endl;

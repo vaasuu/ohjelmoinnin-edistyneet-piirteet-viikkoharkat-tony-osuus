@@ -40,7 +40,7 @@ int main() {
 
     for (Henkilo* x : henkilo_ptr_vektori)
     {
-        x->tulostaHenkilonTiedot();
+        x->tulostaTiedot();
     }
     
     return 0;
